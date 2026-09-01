@@ -58,14 +58,14 @@ scix-chess-investigation/
     raw/                # Phase 1 output: sampled PGNs per rating band + game metadata
     processed/          # Phase 2/3 output: raw_moves.csv, analysed_moves.csv, dataset_summary.json
   logs/                 # log files written by each phase
-  pilot_study/          # pilot study notebooks, data, and notes
+  pilot/                # pilot study notebooks, data, and notes
   analysis/             # Phases 4-5: statistical analysis and figures (see its own README)
     notebooks/
     results/
     figures/
 ```
 
-`data/`, `logs/`, `pilot_study/`, and the virtual environment are not checked into the
+`data/`, `logs/`, `pilot/`, and the virtual environment are not checked into the
 repository (see `.gitignore`) — they are created/populated when you run the
 pipeline.
 
