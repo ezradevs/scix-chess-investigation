@@ -45,26 +45,27 @@ and do not require Stockfish.
 ```text
 scix-chess-investigation/
   config.py             # central configuration: paths, rating bands, time pressure bins, error categories, engine settings
-  run_analysis.py        # entry point for Phases 1-3
+  run_analysis.py       # entry point for Phases 1-3
   requirements.txt
   src/
     __init__.py
-    utils.py             # shared helpers (logging, directory setup, checkpoint I/O)
-    phase1_acquire.py    # Phase 1: download + filter + sample games
-    phase2_analyse.py    # Phase 2: Stockfish analysis with checkpointing
-    phase3_structure.py  # Phase 3: clean + derive analytical dataset
-    dashboard.py         # optional Flask dashboard for monitoring Phase 2 progress
+    utils.py            # shared helpers (logging, directory setup, checkpoint I/O)
+    phase1_acquire.py   # Phase 1: download + filter + sample games
+    phase2_analyse.py   # Phase 2: Stockfish analysis with checkpointing
+    phase3_structure.py # Phase 3: clean + derive analytical dataset
+    dashboard.py        # optional Flask dashboard for monitoring Phase 2 progress
   data/
-    raw/                 # Phase 1 output: sampled PGNs per rating band + game metadata
-    processed/           # Phase 2/3 output: raw_moves.csv, analysed_moves.csv, dataset_summary.json
-  logs/                  # log files written by each phase
-  analysis/              # Phases 4-5: statistical analysis and figures (see its own README)
+    raw/                # Phase 1 output: sampled PGNs per rating band + game metadata
+    processed/          # Phase 2/3 output: raw_moves.csv, analysed_moves.csv, dataset_summary.json
+  logs/                 # log files written by each phase
+  pilot_study/          # pilot study notebooks, data, and notes
+  analysis/             # Phases 4-5: statistical analysis and figures (see its own README)
     notebooks/
     results/
     figures/
 ```
 
-`data/`, `logs/`, and the virtual environment are not checked into the
+`data/`, `logs/`, `pilot_study/`, and the virtual environment are not checked into the
 repository (see `.gitignore`) — they are created/populated when you run the
 pipeline.
 
